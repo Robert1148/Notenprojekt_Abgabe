@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Flächeninhaltsrechner</title>
+    <link rel="stylesheet" href="../css/inedx.css">
+
+
+</head>
+<body>
+<h1>Herzlich Willkommen zum Flächeninhaltsrechner :-)!</h1>
+<script type='text/javascript'>
+    function Rechteck(form) {
+        ergebnis = document.getElementById('hoehe').value * document.getElementById('breite').value;
+        if (ergebnis == 0) {
+            document.getElementById('ausgabe').innerHTML = "Ungültige Eingabe";
+        } else {
+            document.getElementById('ausgabe').innerHTML = "Die Fläche des Rechtecks beträgt " + ergebnis + " cm²";
+        }
+    }
+</script>
+
+<form>
+    <p>Rechteck</p> <br/>
+    <h3>
+        <input type="text" name="hoehe" id="hoehe">
+        Höhe des Rechtecks in cm<br/>
+        <input type="text" name="breite" id="breite">
+        Breite des Rechtecks in cm<br/>
+
+        <input name="button" type="button" onClick="Rechteck(this.form)" value="Flächeninhalt berechnen">
+    </h3>
+
+    <br/>
+
+    <h4><div id="ausgabe"></div>
+    </h4>
+
+</form>
+<br/>
+
+</form>
+<br/>
+
+<script type='text/javascript'>
+    function kreis(form) {
+        ergebnis = Math.PI * Math.pow(document.getElementById('radius').value,2)
+        if (ergebnis == 0) {
+            document.getElementById('ausgabe').innerHTML = "Ungültige Eingabe";
+        } else {
+            document.getElementById('ausgabe').innerHTML = "Die Fläche des Kreises beträgt " + ergebnis + " cm²";
+        }
+    }
+
+</script>
+<form>
+    <h5 >Kreis</h5>
+    <input type="text" name="radius" id="radius" />
+    Radius des Kreises in cm<br />
+    <input name="button" type="button" onclick="kreis(this.form)" value="berechnen" />
+    <br />
+    <br />
+    <h6><div id="ausgabe1"></div></h6>
+</form>
+<img src="../img/Rechner.png" height="212" width="212"/>
+
+</body>
